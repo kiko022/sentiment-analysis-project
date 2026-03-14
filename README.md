@@ -27,3 +27,18 @@ python train.py --lr 0.001 --batch_size 32 --epochs 20 --seed 42
 - Python 3.9+
 - TensorFlow 2.13
 - CUDA 11.8 (可选，用于GPU加速)
+
+## 模型架构
+
+- Embedding Layer (128维)
+- Bidirectional LSTM (64单元)
+- Dropout (0.3)
+- Bidirectional LSTM (32单元)
+- Dropout (0.3)
+- Dense (32单元, ReLU激活)
+- Dropout (0.2)
+- Dense (1单元, Sigmoid激活)
+
+## 损失函数
+
+Binary Cross-Entropy Loss
