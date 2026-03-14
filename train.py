@@ -38,13 +38,13 @@ def build_model(vocab_size: int, embedding_dim: int = 128, max_len: int = 200):
 
 
 def main():
-    parser = argparse.ArgumentParser()
-    parser.add_argument('--lr', type=float, default=0.001)
-    parser.add_argument('--batch_size', type=int, default=32)
-    parser.add_argument('--epochs', type=int, default=20)
-    parser.add_argument('--max_words', type=int, default=10000)
-    parser.add_argument('--max_len', type=int, default=200)
-    parser.add_argument('--seed', type=int, default=42)
+    parser = argparse.ArgumentParser(description='IMDB Sentiment Analysis with BiLSTM')
+    parser.add_argument('--lr', type=float, default=0.001, help='Learning rate')
+    parser.add_argument('--batch_size', type=int, default=32, help='Batch size')
+    parser.add_argument('--epochs', type=int, default=20, help='Number of epochs')
+    parser.add_argument('--max_words', type=int, default=10000, help='Maximum number of words')
+    parser.add_argument('--max_len', type=int, default=200, help='Maximum sequence length')
+    parser.add_argument('--seed', type=int, default=42, help='Random seed')
     args = parser.parse_args()
     
     set_seeds(args.seed)
